@@ -12,6 +12,7 @@ public class FinishLine : MonoBehaviour
         if(!hasTriggered && other.CompareTag("Player"))
         Debug.Log("Win");
         finishEffect.Play();
+        GetComponent<AudioSource>().Play();
        Invoke("roadScene", finishDelay);
         hasTriggered = true;
     }
